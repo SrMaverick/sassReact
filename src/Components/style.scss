@@ -1,0 +1,65 @@
+$background: #202124;
+$darkblue: #0C1317;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@mixin Titulos{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+@mixin subtitulos{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+body{
+    background-color: $background;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: $darkblue;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+}
+
+header nav ul{
+    @include subtitulos;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    height: 20vh;
+    width: 30vw;
+}
+
+header div img{
+    width: 4vw;
+    margin: 2vw;
+}
+
+header div h1{
+    @include Titulos()
+}
+
+section figure img{
+    width: 20em;
+    border-radius: 1em;
+}
+
+section figure{
+    display: flex;
+    justify-content: space-around;
+}
